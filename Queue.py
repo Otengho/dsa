@@ -1,29 +1,24 @@
-class Queue:
-    def __init__(self):
-        self.queue=[]
+#queue follows the FIFO methodology
+#the fisrt element to be input comes out first
 
-    def is_empty(self):
-        return len(self.queue)==0
-
-    def enqueue(self,data):
-        self.queue.append(data)
-
-    def dequeue(self):
-        if self.is_empty():
-            return None
-        else:
-           return self.queue.pop(0)
-
-    def size(self):
-        return len(self.queue)
-
-q = Queue()
-q.enqueue(29)
-q.enqueue(40)
-q.enqueue(20)
-
-
-data = q.dequeue()
-print(data)
-print(q.is_empty())
-print(q.size())
+#declaring an empty queue
+queue = []
+  
+# Adding elements to the queue by appending them to the above empty queue
+queue.append('a')
+queue.append('b')
+queue.append('c')
+queue.append('d')
+queue.append('e')
+#printing the Queue before any operation
+print("Initial queue")
+print(queue)
+  
+# Removing 3 elements from the queue and print them out
+print("\nElements dequeued from queue")
+print(queue.pop(0))
+print(queue.pop(0))
+print(queue.pop(0))
+#Printing elements left in a queue
+print("\nQueue after removing elements")
+print(queue)
